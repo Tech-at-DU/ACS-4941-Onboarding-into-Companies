@@ -1,66 +1,108 @@
-# Lesson Title
+# Lesson 7: Technical Interviews I — Algorithms, Data Structures & Thinking Out Loud
 
-## Minute-by-Minute [OPTIONAL]
+**Week 4 · Monday, November 9, 2026 · 10:00 AM – 12:45 PM**
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:45      | In Class Activity I       |
-| 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+## Minute-by-Minute
 
-## Why you should know this or industry application (optional) (5 min)
+| **Elapsed** | **Time** | **Activity** |
+| --- | --- | --- |
+| 0:00 | 0:10 | Standup |
+| 0:10 | 0:20 | Overview: anatomy of a technical interview |
+| 0:30 | 0:25 | Demo: instructor solves a problem out loud |
+| 0:55 | 0:20 | Pattern drills |
+| 1:15 | 0:10 | BREAK |
+| 1:25 | 1:00 | Challenge 4, part A: timed mock interviews |
+| 2:25 | 0:15 | Debrief & Challenge 4, part B assigned |
+| 2:40 | 0:05 | Wrap up |
+| TOTAL | 2:45 | |
 
-Explain why students should care to learn the material presented in this class.
+## Why you should know this
 
-## Learning Objectives (5 min)
+Algorithm and data structure interviews (often called DSA — data structures and algorithms) are still common, especially at larger companies. They're rarely about getting the perfect answer. Interviewers mostly grade *how you think*: do you clarify, plan, communicate, and test? That's a learnable process, and it's the same process that makes you strong in every other interview format.
 
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
+## Learning Objectives
 
-## Initial Exercise (15 min)
+1. Follow a repeatable sequence for solving a technical interview problem
+1. Narrate your thinking clearly while solving a problem
+1. Recognize common problem patterns (hash maps, two pointers, sliding window, BFS/DFS)
+1. Manage your time across a 35–45 minute interview
+1. Use AI tools to study algorithms in ways that build skill rather than replace it
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+## Standup (10 min)
 
-## Overview/TT I (20 min)
+What I did · What I'll do · Where I'm stuck. AI Screen Practice reflections due today.
 
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
+## Overview: Anatomy of a Technical Interview (20 min)
 
-## In Class Activity I (30 min)
+**The sequence** (practice it until it's automatic):
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+| Step | What to do | Time (of 40 min) |
+| --- | --- | --- |
+| 1. Clarify | Restate the problem. Ask about input size, edge cases, and expected output. | 3–5 min |
+| 2. Examples | Work through 1–2 examples by hand, including an edge case. | 3 min |
+| 3. Brute force | Describe the simplest working approach and its Big O (how time/memory grows with input). | 3 min |
+| 4. Optimize | Look for a better approach. Name the pattern. | 5 min |
+| 5. Code | Write clean code, narrating as you go. | 15 min |
+| 6. Test | Walk through your code with an example. Check edge cases. Fix bugs. | 5 min |
+| 7. Analyze | State final time and space complexity. Mention tradeoffs. | 2 min |
 
-## Overview/TT II (optional) (20 min)
+**Thinking out loud:**
 
-## In Class Activity II (optional) (30 min)
+- Silence makes interviewers nervous. Narrate even when you're stuck: "I'm thinking about whether a hash map helps here because…"
+- If you're stuck, say so, and say what you've tried. Interviewers often give hints to candidates who communicate.
+- Don't announce "I've seen this problem before" and rush. Walk through it properly.
+
+**Why these interviews persist despite AI:** they test reasoning under pressure without tools, and they're hard to fake in person. Expect them especially in in-person final rounds.
+
+## Demo: Instructor Solves a Problem Out Loud (25 min)
+
+The instructor solves **Group Anagrams** (or another interview-level problem) live, following the sequence and narrating everything — including a deliberate mistake and how to recover.
+
+Students score the instructor on the [challenge rubric](../Assignments/Technical_Challenges.md#rubric) while watching, then discuss: What did good narration sound like? When did the instructor slow down?
+
+## Pattern Drills (20 min)
+
+Quick group drills — for each problem description, name the pattern and the brute-force vs. optimized complexity (no coding):
+
+| Pattern | Signal in the problem | Example |
+| --- | --- | --- |
+| Hash map | "Find a pair," "count occurrences," "seen before?" | Two Sum |
+| Two pointers | Sorted array, pairs, palindromes | Valid Palindrome |
+| Sliding window | "Longest/shortest substring or subarray with…" | Longest Substring Without Repeating Characters |
+| Stack | Matching brackets, "next greater element" | Valid Parentheses |
+| BFS / DFS | Grids, connected regions, trees, shortest path | Number of Islands |
+| Sort first | Intervals, scheduling, grouping | Merge Intervals |
+
+## Challenge 4, Part A: Timed Mock Interviews (60 min)
+
+Three rounds of 20 minutes, rotating roles. With 20-minute rounds, use **warm-up** problems from the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed):
+
+- **Interviewer:** presents the problem, answers clarifying questions, gives a hint only if the candidate is stuck for 3+ minutes, asks for complexity at the end.
+- **Candidate:** follows the sequence, narrates, codes in a plain editor (no autocomplete, no AI).
+- **Observer:** scores the candidate on the rubric and keeps time, calling out 10 and 5 minutes remaining.
+
+2 minutes of feedback after each round, then rotate.
+
+## Debrief & Challenge 4, Part B (15 min)
+
+- Which step of the sequence did each person skip under pressure? (Usually: clarifying and testing.)
+- **Part B assigned:** complete one debugging exercise (DB-1 to DB-3) from the [Problem Bank](../Resources/Problem_Bank.md#format-3-debug-an-unfamiliar-codebase). Submit a short write-up: how you reproduced the bug, your hypothesis, your fix, and how you verified it. No AI. Due before Session 8.
+
+**AI in practice — studying algorithms:**
+
+- **Do:** attempt the problem first, then ask the AI for a *hint*, not a solution. Ask it to quiz you on patterns. Ask it to review your solution's complexity.
+- **Don't:** read AI solutions and believe you've learned them. Recognizing a solution is not the same as producing one under pressure.
+- Try this prompt: "I'm practicing for interviews. Give me a medium array problem. Don't show the solution. When I describe my approach, tell me if it's on track and give one hint at a time."
 
 ## Wrap Up (5 min)
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+Before Session 8:
+
+- Complete Challenge 4, part B (debugging write-up)
+- Practice 3 problems on your own, out loud, with a timer
+- Keep up outreach and log informational interviews
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. [Problem Bank](../Resources/Problem_Bank.md)
+1. [Technical challenge rubric](../Assignments/Technical_Challenges.md#rubric)

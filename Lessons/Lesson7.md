@@ -56,26 +56,28 @@ What I did · What I'll do · Where I'm stuck. AI Screen Practice reflections du
 
 ## Demo: Instructor Solves a Problem Out Loud (25 min)
 
-The instructor solves **Group Anagrams** (or another interview-level problem) live, following the sequence and narrating everything — including a deliberate mistake and how to recover.
+The instructor solves **I-1: Bot Account Detector** from the [Problem Bank](../Resources/Problem_Bank.md#i-1-bot-account-detector) (or another interview-level problem) live, following the sequence and narrating everything — including a deliberate mistake and how to recover.
 
-Students score the instructor on the [challenge rubric](../Assignments/Technical_Challenges.md#rubric) while watching, then discuss: What did good narration sound like? When did the instructor slow down?
+Students score the instructor on the [challenge rubric](../Assignments/Technical_Challenges.md#rubric) while watching, then discuss: What did good narration sound like? When did the instructor slow down? Did anyone recognize the problem underneath the story?
 
 ## Pattern Drills (20 min)
 
-Quick group drills — for each problem description, name the pattern and the brute-force vs. optimized complexity (no coding):
+Interviewers rarely use a problem's textbook name. They describe it as part of their product, and you have to recognize the shape underneath. Many problems in the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed) are ones you've solved before, in disguise.
+
+Quick group drill: the instructor reads a Problem Bank story aloud. Students name the pattern, the signal that gave it away, and the brute-force vs. optimized complexity. No coding, and no peeking at the answer key.
 
 | Pattern | Signal in the problem | Example |
 | --- | --- | --- |
-| Hash map | "Find a pair," "count occurrences," "seen before?" | Two Sum |
-| Two pointers | Sorted array, pairs, palindromes | Valid Palindrome |
-| Sliding window | "Longest/shortest substring or subarray with…" | Longest Substring Without Repeating Characters |
-| Stack | Matching brackets, "next greater element" | Valid Parentheses |
-| BFS / DFS | Grids, connected regions, trees, shortest path | Number of Islands |
-| Sort first | Intervals, scheduling, grouping | Merge Intervals |
+| Hash map | "Find a pair," "count occurrences," "seen before?" | W-1 Gift Card Checkout |
+| Two pointers | Sorted array, pairs, reading from both ends | Checking whether a product code reads the same forwards and backwards |
+| Sliding window | "Longest/shortest stretch of consecutive items with…" | I-3 Longest Fresh Streak |
+| Stack | Matching open/close pairs, "most recent unfinished thing" | W-2 Config File Validator |
+| BFS / DFS | Grids, connected regions, trees, rounds or levels | I-6 Wi-Fi Dead Zones |
+| Sort first | Time ranges, scheduling, grouping | I-4 Calendar Busy Blocks |
 
 ## Challenge 4, Part A: Timed Mock Interviews (60 min)
 
-Three rounds of 20 minutes, rotating roles. With 20-minute rounds, use **warm-up** problems from the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed):
+Three rounds of 20 minutes, rotating roles. With 20-minute rounds, use **warm-up** problems from the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed) that the candidate hasn't seen yet:
 
 - **Interviewer:** presents the problem, answers clarifying questions, gives a hint only if the candidate is stuck for 3+ minutes, asks for complexity at the end.
 - **Candidate:** follows the sequence, narrates, codes in a plain editor (no autocomplete, no AI).

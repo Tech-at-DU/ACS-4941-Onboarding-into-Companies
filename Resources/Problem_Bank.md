@@ -1,6 +1,6 @@
 # Problem Bank
 
-Problems for the [Technical Interview Challenge Rotation](../Assignments/Technical_Challenges.md) and in-class mock interviews, grouped by interview format. Problem names in the algorithm section match common practice sites (LeetCode, NeetCode, HackerRank), so you can find extra test cases there.
+Problems for the [Technical Interview Challenge Rotation](../Assignments/Technical_Challenges.md) and in-class mock interviews, grouped by interview format.
 
 ---
 
@@ -8,30 +8,201 @@ Problems for the [Technical Interview Challenge Rotation](../Assignments/Technic
 
 Time limit: 35–45 minutes per problem, including talking through your approach. Practice saying your approach out loud *before* you code.
 
+**Some of these may look new, but they aren't.** Real interviewers rarely give a problem its textbook name. They wrap it in a story about their product. Part of the skill is looking past the story to the problem underneath: *"This is really a counting problem," "this is a graph," "I've seen this shape before."* For each problem, try to name the pattern before you start coding. The answer key is at the end of this section.
+
 ### Warm-up (use for the Week 1 diagnostic)
 
-| Problem | Core idea |
-| --- | --- |
-| Two Sum | Hash map for O(n) lookup |
-| Valid Parentheses | Stack |
-| Valid Anagram | Counting characters with a hash map |
-| Best Time to Buy and Sell Stock | Track a running minimum |
-| Merge Two Sorted Lists | Linked list pointers |
-| Maximum Depth of Binary Tree | Recursion on trees |
+#### W-1: Gift Card Checkout
+
+A customer wants to pay for a purchase using exactly two gift cards. Given a list of gift card balances and the purchase total, return the positions of the two cards whose balances add up to exactly the total. Assume there is exactly one answer, and a card can't be used twice.
+
+```text
+balances = [25, 10, 40, 12, 30], total = 55   →   [0, 4]   (25 + 30)
+```
+
+#### W-2: Config File Validator
+
+Your team's config files use three kinds of grouping symbols: `()`, `[]`, and `{}`. A file is valid only if every opening symbol is closed by the same kind of symbol, in the right order. Given a string containing only these characters, return whether it's valid.
+
+```text
+"{[()()]}"   →   true
+"{[(])}"     →   false
+"(("         →   false
+```
+
+#### W-3: Word Game Tile Check
+
+In a word game, a player has a rack of letter tiles. Given the letters on the rack and a word the player wants to play, return whether the word uses **every** tile on the rack exactly once (no tiles left over, none missing).
+
+```text
+rack = "tnsiel", word = "listen"   →   true
+rack = "tnsiel", word = "lists"    →   false
+```
+
+#### W-4: Concert Ticket Resale
+
+You're tracking the resale price of a concert ticket each day for a month. You may buy one ticket on one day and sell it on a **later** day. Return the most profit you could make. If no profit is possible, return 0.
+
+```text
+prices = [90, 60, 85, 50, 70, 110, 95]   →   60   (buy at 50, sell at 110)
+prices = [120, 100, 80]                  →   0
+```
+
+#### W-5: Merging Two Playlists
+
+Two playlists are stored as linked lists, each already sorted by song length (shortest first). Merge them into one linked list sorted by song length, reusing the existing nodes instead of creating new ones.
+
+```text
+A: 2:10 → 3:05 → 4:40
+B: 1:55 → 3:30
+→  1:55 → 2:10 → 3:05 → 3:30 → 4:40
+```
+
+#### W-6: Chain of Command
+
+A small company's org chart is stored as a tree where each manager has at most two direct reports. Given the CEO's node, return the number of levels in the longest chain of command, from the CEO down to an employee with no reports.
+
+```text
+        CEO
+       /   \
+     CTO   CFO
+     /
+   Lead
+   /
+ Junior            →   4
+```
 
 ### Interview level (use for Week 4)
 
-| Problem | Core idea |
-| --- | --- |
-| Group Anagrams | Hash map with a computed key |
-| Top K Frequent Elements | Hash map + heap or bucket sort |
-| Longest Substring Without Repeating Characters | Sliding window |
-| Merge Intervals | Sort, then sweep |
-| Product of Array Except Self | Prefix and suffix products |
-| Number of Islands | Graph traversal (BFS or DFS — breadth-first or depth-first search) |
-| Binary Tree Level Order Traversal | BFS with a queue |
-| LRU Cache | Hash map + doubly linked list (good for discussing design) |
-| Climbing Stairs / House Robber | Introductory dynamic programming |
+#### I-1: Bot Account Detector
+
+Spam bots often sign up with usernames that are the same letters scrambled: `"mariel"`, `"mailer"`, `"realim"`. Given a list of usernames, group together the usernames that are rearrangements of each other. Return the groups in any order.
+
+```text
+["mailer", "dorm", "mariel", "rodm", "solo", "realim"]
+→ [["mailer", "mariel", "realim"], ["dorm", "rodm"], ["solo"]]
+```
+
+#### I-2: Trending Tags
+
+Given a list of every tag used in posts today, return the `k` tags used most often. Order within the result doesn't matter.
+
+```text
+tags = ["ai", "jobs", "ai", "react", "jobs", "ai", "rust"], k = 2   →   ["ai", "jobs"]
+```
+
+Follow-up: what if the list has 100 million tags but only a few thousand distinct ones?
+
+#### I-3: Longest Fresh Streak
+
+A music app logs your listening history as a string where each character is a song ID. Find the length of the longest stretch of **consecutive** plays in which no song repeats.
+
+```text
+"abcabcbb"   →   3   ("abc")
+"bbbbb"      →   1
+"pwwkew"     →   3   ("wke")
+```
+
+#### I-4: Calendar Busy Blocks
+
+Given a list of meetings as `[start, end]` times (in minutes after 9:00 AM, not sorted), combine any meetings that overlap or touch into single busy blocks. Return the busy blocks sorted by start time.
+
+```text
+[[60, 90], [0, 30], [80, 120], [30, 45]]   →   [[0, 45], [60, 120]]
+```
+
+#### I-5: Leave-One-Out Factors
+
+A factory line has several machines in a row, each with a quality factor. For each machine, engineers want to know the combined factor of **all the other machines** (multiply them together). Return a list with that value for each position. You may not use division — a broken machine can have a factor of 0.
+
+```text
+[2, 3, 4, 5]   →   [60, 40, 30, 24]
+[1, 0, 3]      →   [0, 3, 0]
+```
+
+#### I-6: Wi-Fi Dead Zones
+
+A building's Wi-Fi survey is a grid where `1` means a weak-signal spot and `0` means good signal. Weak spots that touch up, down, left, or right are part of the same dead zone. Count how many separate dead zones there are.
+
+```text
+1 1 0 0 0
+1 1 0 0 1
+0 0 0 1 1
+0 0 0 0 0
+1 0 0 0 0      →   3
+```
+
+#### I-7: Emergency Phone Tree
+
+A school's emergency phone tree is a tree where each person calls at most two others. The principal calls first, then everyone they called makes calls at the same time, and so on. Return a list of rounds, where each round lists the people who receive a call in that round (the principal is round 0).
+
+```text
+        Principal
+        /       \
+     Ana        Ben
+     /  \          \
+   Cal  Dee        Eve
+
+→ [["Principal"], ["Ana", "Ben"], ["Cal", "Dee", "Eve"]]
+```
+
+#### I-8: Recently Viewed Products
+
+An online store shows each shopper their recently viewed products, but only has room to remember `capacity` products. Design a class with two operations, both running in O(1) time:
+
+- `view(product_id, details)` — record that the product was viewed (adding it, or refreshing it if already there). If this goes over capacity, forget the product that was viewed longest ago.
+- `get(product_id)` — return the product's details if it's remembered (this counts as a view), or `null` if not.
+
+```text
+capacity = 2
+view(1, "mug"); view(2, "hat"); get(1) → "mug"
+view(3, "pen")      // forgets product 2, the least recently viewed
+get(2) → null
+```
+
+#### I-9: Parking Garage Ramps
+
+You're walking up a parking garage with `n` levels. Each ramp takes you up either 1 level or 2 levels. How many different sequences of ramps get you from the ground to level `n`?
+
+```text
+n = 3   →   3   (1+1+1, 1+2, 2+1)
+n = 5   →   8
+```
+
+#### I-10: Delivery Tips
+
+A delivery driver has a street of houses, each with a known tip amount. Company policy says the driver can't deliver to two houses right next to each other on the same shift. Return the largest total tip the driver can collect.
+
+```text
+tips = [5, 1, 2, 9, 3]   →   14   (houses 0 and 3 → 5 + 9)
+tips = [2, 7, 9, 3, 1]   →   12   (2 + 9 + 1)
+```
+
+<details>
+<summary>Answer key: patterns & classic names (try to spot them yourself first)</summary>
+
+| Problem | Pattern | Classic name you may have seen |
+| --- | --- | --- |
+| W-1 Gift Card Checkout | Hash map: store what you've seen, look up the complement | Two Sum |
+| W-2 Config File Validator | Stack | Valid Parentheses |
+| W-3 Word Game Tile Check | Count characters with a hash map | Valid Anagram |
+| W-4 Concert Ticket Resale | Track a running minimum | Best Time to Buy and Sell Stock |
+| W-5 Merging Two Playlists | Linked list pointers | Merge Two Sorted Lists |
+| W-6 Chain of Command | Recursion on trees | Maximum Depth of Binary Tree |
+| I-1 Bot Account Detector | Hash map with a computed key (sorted letters or letter counts) | Group Anagrams |
+| I-2 Trending Tags | Hash map + heap or bucket sort | Top K Frequent Elements |
+| I-3 Longest Fresh Streak | Sliding window | Longest Substring Without Repeating Characters |
+| I-4 Calendar Busy Blocks | Sort, then sweep | Merge Intervals |
+| I-5 Leave-One-Out Factors | Prefix and suffix products | Product of Array Except Self |
+| I-6 Wi-Fi Dead Zones | Graph traversal (BFS or DFS — breadth-first or depth-first search) | Number of Islands |
+| I-7 Emergency Phone Tree | BFS with a queue | Binary Tree Level Order Traversal |
+| I-8 Recently Viewed Products | Hash map + doubly linked list | LRU Cache |
+| I-9 Parking Garage Ramps | Introductory dynamic programming (Fibonacci-shaped) | Climbing Stairs |
+| I-10 Delivery Tips | Dynamic programming: take it or skip it | House Robber |
+
+Once you've solved one, search the classic name to find more test cases and practice problems with the same pattern.
+
+</details>
 
 ---
 

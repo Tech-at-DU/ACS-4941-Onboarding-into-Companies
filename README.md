@@ -62,7 +62,7 @@ All sessions are Monday and Wednesday, 10:00 AM – 12:45 PM. Every session open
 | 2 | [3](Lessons/Lesson3.md) | Mon 10/26 | Resume, AI resume screening, and targeting the right roles | Challenge 2 assigned |
 | 2 | [4](Lessons/Lesson4.md) | Wed 10/28 | LinkedIn, networking & warm outreach (outreach power hour) | Challenge 2 debrief |
 | 3 | [5](Lessons/Lesson5.md) | Mon 11/2 | Informational interviews & building your story bank | Challenge 3 assigned |
-| 3 | [6](Lessons/Lesson6.md) | Wed 11/4 | Recruiter screens, AI phone screens & recorded video interviews | Challenge 3 debrief |
+| 3 | [6](Lessons/Lesson6.md) | Wed 11/4 | Take-home review, first-round screens & in-class problem solving | Challenge 3 debrief |
 | 4 | [7](Lessons/Lesson7.md) | Mon 11/9 | Technical interviews I: algorithms, data structures & thinking out loud | Challenge 4 assigned |
 | 4 | [8](Lessons/Lesson8.md) | Wed 11/11 | Technical interviews II: take-homes, debugging & reviewing AI-written code | Challenge 4 debrief |
 | 5 | [9](Lessons/Lesson9.md) | Mon 11/16 | AI-assisted coding interviews & interview integrity | Challenge 5 (live, in class) |
@@ -86,7 +86,7 @@ Track all work in your personal [Job Search Tracker](Resources/Job_Search_Tracke
 | [Proof-of-Work Portfolio & Deployed Project](Assignments/Portfolio_Proof_of_Work.md) | Live URL: Session 4 · Final: Session 14 | 15% |
 | [Resume & LinkedIn](Assignments/Resume_LinkedIn.md) | Session 5 | 5% |
 | [Networking, Outreach & Informational Interviews](Assignments/Networking_Outreach.md) | Ongoing · Final log: Session 11 | 10% |
-| [AI Screen Practice](Assignments/AI_Screen_Practice.md) | Session 7 | 5% |
+| [AI Screen Practice](Assignments/AI_Screen_Practice.md) | Session 8 | 5% |
 | [Technical Interview Challenge Rotation](Assignments/Technical_Challenges.md) | Weekly, Weeks 1–5 | 20% |
 | [System Design Exercise](Assignments/System_Design.md) | Session 11 | 10% |
 | [Behavioral & Full Mock Interview Loop](Assignments/Mock_Interview_Loop.md) | Session 12 | 15% |

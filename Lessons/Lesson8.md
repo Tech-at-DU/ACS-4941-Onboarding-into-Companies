@@ -33,7 +33,7 @@ Practical interviews look a lot like the actual job: build a small feature, fix 
 
 ## Standup (10 min)
 
-What I did · What I'll do · Where I'm stuck.
+What I did · What I'll do · Where I'm stuck. AI Screen Practice reflections due today.
 
 ## Challenge 4 Debrief (25 min)
 

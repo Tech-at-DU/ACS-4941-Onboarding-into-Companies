@@ -30,7 +30,7 @@ Algorithm and data structure interviews (often called DSA — data structures an
 
 ## Standup (10 min)
 
-What I did · What I'll do · Where I'm stuck. AI Screen Practice reflections due today.
+What I did · What I'll do · Where I'm stuck. How are the AI practice screens going? (Due Session 8.)
 
 ## Overview: Anatomy of a Technical Interview (20 min)
 

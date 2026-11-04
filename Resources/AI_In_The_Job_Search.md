@@ -89,7 +89,7 @@ Many companies now use AI to conduct first-round interviews. These come in three
 - **Test your setup:** camera, microphone, lighting, quiet room, stable internet.
 - **Know your rights.** Some places (for example, Illinois and New York City) require employers to tell you when AI is used in hiring decisions. You can ask the recruiter how the screen is evaluated and whether a human reviews the results.
 
-**What you'll practice in this course:** In Session 6, you'll run AI phone screens in class using free AI voice tools. See [AI Screen Practice](../Assignments/AI_Screen_Practice.md).
+**What you'll practice in this course:** after Session 6, you'll run three practice AI screens on your own using free AI voice tools. See [AI Screen Practice](../Assignments/AI_Screen_Practice.md).
 
 ---
 

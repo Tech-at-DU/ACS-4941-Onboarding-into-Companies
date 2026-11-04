@@ -1,1 +1,4 @@
 .DS_STORE
+
+# Instructor-only materials (answer keys) - keep out of the public repo
+Instructor/

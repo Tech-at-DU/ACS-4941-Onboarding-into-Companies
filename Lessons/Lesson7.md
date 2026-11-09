@@ -24,7 +24,7 @@ Algorithm and data structure interviews (often called DSA — data structures an
 
 1. Follow a repeatable sequence for solving a technical interview problem
 1. Narrate your thinking clearly while solving a problem
-1. Recognize common problem patterns (hash maps, two pointers, sliding window, BFS/DFS)
+1. Recognize common problem patterns (hash maps, two pointers, sliding window, stacks, BFS/DFS, sort first)
 1. Manage your time across a 35–45 minute interview
 1. Use AI tools to study algorithms in ways that build skill rather than replace it
 
@@ -36,15 +36,15 @@ What I did · What I'll do · Where I'm stuck. How are the AI practice screens g
 
 **The sequence** (practice it until it's automatic):
 
-| Step | What to do | Time (of 40 min) |
-| --- | --- | --- |
-| 1. Clarify | Restate the problem. Ask about input size, edge cases, and expected output. | 3–5 min |
-| 2. Examples | Work through 1–2 examples by hand, including an edge case. | 3 min |
-| 3. Brute force | Describe the simplest working approach and its Big O (how time/memory grows with input). | 3 min |
-| 4. Optimize | Look for a better approach. Name the pattern. | 5 min |
-| 5. Code | Write clean code, narrating as you go. | 15 min |
-| 6. Test | Walk through your code with an example. Check edge cases. Fix bugs. | 5 min |
-| 7. Analyze | State final time and space complexity. Mention tradeoffs. | 2 min |
+| Step | What to do | Time (of 40 min) | Today's 18-min mock |
+| --- | --- | --- | --- |
+| 1. Clarify | Restate the problem. Ask about input size, edge cases, and expected output. | 3–5 min | 2 min |
+| 2. Examples | Work through 1–2 examples by hand, including an edge case. | 3 min | 2 min |
+| 3. Brute force | Describe the simplest working approach and its Big O (how time/memory grows with input). | 3 min | 1 min |
+| 4. Optimize | Look for a better approach. Name the pattern. | 5 min | 2 min |
+| 5. Code | Write clean code, narrating as you go. | 15 min | 8 min |
+| 6. Test | Walk through your code with an example. Check edge cases. Fix bugs. | 5 min | 2 min |
+| 7. Analyze | State final time and space complexity. Mention tradeoffs. | 2 min | 1 min |
 
 **Thinking out loud:**
 
@@ -56,7 +56,7 @@ What I did · What I'll do · Where I'm stuck. How are the AI practice screens g
 
 ## Demo: Instructor Solves a Problem Out Loud (25 min)
 
-The instructor solves **I-1: Bot Account Detector** from the [Problem Bank](../Resources/Problem_Bank.md#i-1-bot-account-detector) (or another interview-level problem) live, following the sequence and narrating everything — including a deliberate mistake and how to recover.
+The instructor solves **I-1: Bot Account Detector** from the [Problem Bank](../Resources/Problem_Bank.md#i-1-bot-account-detector) (or another interview-level problem)
 
 Students score the instructor on the [challenge rubric](../Assignments/Technical_Challenges.md#rubric) while watching, then discuss: What did good narration sound like? When did the instructor slow down? Did anyone recognize the problem underneath the story?
 
@@ -64,31 +64,40 @@ Students score the instructor on the [challenge rubric](../Assignments/Technical
 
 Interviewers rarely use a problem's textbook name. They describe it as part of their product, and you have to recognize the shape underneath. Many problems in the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed) are ones you've solved before, in disguise.
 
-Quick group drill: the instructor reads a Problem Bank story aloud. Students name the pattern, the signal that gave it away, and the brute-force vs. optimized complexity. No coding, and no peeking at the answer key.
+Quick group drill: the instructor reads **I-2 Trending Tags**, **I-5 Leave-One-Out Factors**, and **I-10 Delivery Tips** aloud, one at a time. Students name the pattern, the signal that gave it away, and the brute-force vs. optimized complexity. No coding, and no peeking at the answer key or the table below until the drill is done. If you solved one of these in Session 6, answer last.
+
+I-5 and I-10 aren't in the table on purpose. Real problems won't always match a pattern you've studied, so describe the shape you see and work from there.
+
+Then one with no Problem Bank story: "Given a sorted list of prices, find two that add up to a target." What changes if the list isn't sorted?
+
+**After the drill**, compare your answers with the common patterns:
 
 | Pattern | Signal in the problem | Example |
 | --- | --- | --- |
-| Hash map | "Find a pair," "count occurrences," "seen before?" | W-1 Gift Card Checkout |
+| Hash map | "Find a pair," "count occurrences," "seen before?" | I-1 Bot Account Detector |
 | Two pointers | Sorted array, pairs, reading from both ends | Checking whether a product code reads the same forwards and backwards |
 | Sliding window | "Longest/shortest stretch of consecutive items with…" | I-3 Longest Fresh Streak |
-| Stack | Matching open/close pairs, "most recent unfinished thing" | W-2 Config File Validator |
+| Stack | Matching open/close pairs, "most recent unfinished thing" | The undo history in a text editor |
 | BFS / DFS | Grids, connected regions, trees, rounds or levels | I-6 Wi-Fi Dead Zones |
 | Sort first | Time ranges, scheduling, grouping | I-4 Calendar Busy Blocks |
 
+For the sorted-prices question: sorted input points to two pointers (O(n) time, O(1) extra space). Unsorted input points to a hash map (O(n) time, O(n) extra space).
+
 ## Challenge 4, Part A: Timed Mock Interviews (60 min)
 
-Three rounds of 20 minutes, rotating roles. With 20-minute rounds, use **warm-up** problems from the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed) that the candidate hasn't seen yet:
+Three rounds of 18 minutes, rotating roles, with 2 minutes of feedback after each round. With rounds this short, use **warm-up** problems from the [Problem Bank](../Resources/Problem_Bank.md#format-1-algorithms--data-structures-timed) that the candidate hasn't seen yet, and follow the 18-minute column in the sequence above. Each round uses a different problem, because everyone sees every round.
 
-- **Interviewer:** presents the problem, answers clarifying questions, gives a hint only if the candidate is stuck for 3+ minutes, asks for complexity at the end.
-- **Candidate:** follows the sequence, narrates, codes in a plain editor (no autocomplete, no AI).
+- **Interviewer:** presents the problem from the interviewer card, answers clarifying questions from the card, gives the next hint only if the candidate is stuck for 3+ minutes, tries the card's test cases, and asks for complexity at the end.
+- **Candidate:** follows the sequence, narrates, codes in a plain editor (no autocomplete, no AI), and saves the code for the Part A submission.
 - **Observer:** scores the candidate on the rubric and keeps time, calling out 10 and 5 minutes remaining.
 
-2 minutes of feedback after each round, then rotate.
+> **Instructor note:** choose the three problems before class using `Instructor/Lesson7_Instructor_Notes.md`, and give each round's interviewer only that round's card.
 
 ## Debrief & Challenge 4, Part B (15 min)
 
 - Which step of the sequence did each person skip under pressure? (Usually: clarifying and testing.)
-- **Part B assigned:** complete one debugging exercise (DB-1 to DB-3) from the [Problem Bank](../Resources/Problem_Bank.md#format-3-debug-an-unfamiliar-codebase). Submit a short write-up: how you reproduced the bug, your hypothesis, your fix, and how you verified it. No AI. Due before Session 8.
+- **Part A submission:** add a link to your tracker for a repo or gist with your mock interview solution, plus a short note on its time and space complexity and what you'd do differently. Due before Session 8.
+- **Part B assigned:** complete debugging exercise [DB-1](../Resources/Problem_Bank.md#db-1-the-off-by-something-pagination) from the Problem Bank. Submit a short write-up: how you reproduced the bug, your hypothesis, your fix, and how you verified it. No AI. Due before Session 8.
 
 **AI in practice — studying algorithms:**
 
@@ -100,7 +109,9 @@ Three rounds of 20 minutes, rotating roles. With 20-minute rounds, use **warm-up
 
 Before Session 8:
 
+- Submit Challenge 4, part A (solution link and complexity note in your tracker)
 - Complete Challenge 4, part B (debugging write-up)
+- Finish your [AI Screen Practice](../Assignments/AI_Screen_Practice.md)
 - Practice 3 problems on your own, out loud, with a timer
 - Keep up outreach and log informational interviews
 

@@ -15,7 +15,7 @@ Each challenge is assigned in the first session of the week and debriefed in the
 | 1 | Mon 10/19 | Wed 10/21 | **Diagnostic:** one timed warm-up algorithm problem, done in class in Session 1 (40 min). Low stakes — this is your baseline. | No |
 | 2 | Mon 10/26 | Wed 10/28 | **Take-home** (TH-1 to TH-4, 3–4 hours) | **Yes — must be disclosed in README** |
 | 3 | Mon 11/2 | Wed 11/4 | **Take-home** (a different one from Week 2, 3–4 hours) | No |
-| 4 | Mon 11/9 | Wed 11/11 | **Part A:** timed algorithm problem under interview conditions, done in class in Session 7 with a classmate as interviewer. **Part B:** one debugging exercise (DB-1 to DB-3) as homework | No |
+| 4 | Mon 11/9 | Wed 11/11 | **Part A:** timed algorithm problem under interview conditions, done in class in Session 7 with a classmate as interviewer. **Part B:** debugging exercise DB-1 as homework | No |
 | 5 | Mon 11/16 | Wed 11/18 | **Live AI-assisted coding round**, done in class in Session 9 (AI-1, AI-2, or AI-4), 30 min each, with a 1:1 instructor debrief in Session 10 | **Yes — required** |
 
 Weeks 2 and 3 are deliberately paired: comparing the same kind of task with and without AI shows you where AI actually helps you and where you depend on it.

@@ -74,7 +74,7 @@ All sessions are Monday and Wednesday, 10:00 AM – 12:45 PM. Every session open
 | 7 | [14](Lessons/Lesson14.md) | Wed 12/9 | Onboarding into a company, demo day & wrap-up | — |
 | 7 | — | Fri 12/11 | Term ends — all late work and make-up work due by 11:59 PM | — |
 
-> **Instructor note:** confirm the Thanksgiving break dates and whether Wednesday 11/11 (Veterans Day) is a class day against the official academic calendar before the term starts.
+> **Instructor note:** confirm the Thanksgiving break dates against the official academic calendar before the term starts.
 
 ## Assignments
 

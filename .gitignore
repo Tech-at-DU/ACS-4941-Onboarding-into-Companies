@@ -2,3 +2,10 @@
 
 # Instructor-only materials (answer keys) - keep out of the public repo
 Instructor/
+
+# Debugging Lab: local install/run artifacts
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+Resources/Debugging_Lab/dashboard/dashboard.db

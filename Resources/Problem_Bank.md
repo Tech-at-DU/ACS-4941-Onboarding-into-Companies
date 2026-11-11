@@ -252,7 +252,7 @@ def paginate(items, page, page_size):
 
 ### DB-2: The disappearing cart items
 
-Adding the same product twice sometimes resets the quantity instead of increasing it.
+Adding the same product twice resets the quantity instead of increasing it. Run it yourself with the [Debugging Lab](Debugging_Lab.zip) (`cart/` folder).
 
 ```javascript
 function addToCart(cart, productId, qty) {
@@ -268,7 +268,7 @@ function addToCart(cart, productId, qty) {
 
 ### DB-3: The slow dashboard
 
-A dashboard takes 20 seconds to load for users with many projects. Find the performance problem.
+A dashboard takes 20 seconds to load for users with many projects. Find the performance problem. Run it yourself with the [Debugging Lab](Debugging_Lab.zip) (`dashboard/` folder).
 
 ```python
 def dashboard(user):

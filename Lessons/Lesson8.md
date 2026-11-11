@@ -71,8 +71,8 @@ This is a preview of the second half of today: reviewing AI output is a skill, a
 
 Use the **[Debugging Lab](../Resources/Debugging_Lab.zip)**. Its README has the bug reports, setup steps, and tasks.
 
-1. **I do (10 min): DB-3, the slow dashboard** (`dashboard/` folder). The instructor talks through the process out loud: reproduce → read the code → form a hypothesis → measure → fix → verify. Follow along on your own machine.
-1. **We do (15 min): DB-2, the disappearing cart items** (`cart/` folder). One student shares their screen and drives while everyone else directs. The driver rotates every 5 minutes. Notice that all the tests pass even though the bug is real. Write a failing test *before* you fix anything.
+1. **(10 min): DB-3, the slow dashboard** (`dashboard/` folder). The instructor talks through the process out loud: reproduce → read the code → form a hypothesis → measure → fix → verify. Follow along on your own machine.
+1. **(15 min): DB-2, the disappearing cart items** (`cart/` folder). One student shares their screen and drives while everyone else directs. The driver rotates every 5 minutes. Notice that all the tests pass even though the bug is real. Write a failing test *before* you fix anything.
 
 **Debugging process to practice:**
 

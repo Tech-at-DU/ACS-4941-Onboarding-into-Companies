@@ -367,7 +367,7 @@ Rules:
 
 ### AI-1: Add a feature to a starter app
 
-Given a small to-do API (instructor provides), add due dates and an endpoint that returns overdue tasks, with tests. The starter code has one pre-existing bug the AI is likely to miss.
+Given a small to-do API, add due dates and an endpoint that returns overdue tasks, with tests. The starter code has one pre-existing bug the AI is likely to miss. Starter code: [To-Do API Starter](Todo_API_Starter.zip) (Python/Flask).
 
 ### AI-2: Build from a vague spec
 
@@ -375,7 +375,7 @@ Given a small to-do API (instructor provides), add due dates and an endpoint tha
 
 ### AI-3: Fix a failing test suite
 
-Given a repo with five failing tests, get them passing. The AI will be tempted to change the tests instead of the code — catching that is part of the challenge.
+Given a repo with five failing tests, get them passing. The AI will be tempted to change the tests instead of the code — catching that is part of the challenge. Starter code: [Checkout Demo](Checkout_Demo.zip) (Python).
 
 ### AI-4: Speed + judgment
 

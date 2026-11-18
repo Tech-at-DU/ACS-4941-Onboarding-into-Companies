@@ -66,26 +66,57 @@ The instructor plays interviewer and asks follow-ups: "What if two people vote a
 
 **RAG, explained simply.** An LLM (large language model) only knows what it was trained on, and it will confidently make things up. RAG (retrieval-augmented generation) gives it the right information at question time:
 
-1. **Prepare:** split your documents into small chunks and store them in a way that can be searched by meaning (often a "vector database" — a database that finds text with similar meaning, not just matching words).
-1. **Retrieve:** when a question comes in, search for the most relevant chunks.
+1. **Prepare:** split your documents into small chunks (a few paragraphs each) and turn each chunk into an **embedding**: a list of numbers that represents what the text means. Chunks with similar meaning get similar numbers. Store each chunk's text, its embedding, and who's allowed to see it, often in a "vector database" (a database that finds similar embeddings).
+1. **Retrieve:** when a question comes in, turn the question into an embedding too. Then find the chunks whose embeddings are closest *among the chunks this user is allowed to see*.
 1. **Generate:** send the question *plus* those chunks to the LLM, with instructions to answer only from the provided text and say "I don't know" otherwise.
+
+Those instructions *reduce* made-up answers, but they don't guarantee anything. LLMs still sometimes ignore them. That's why you show sources and test with evals (below).
+
+**Permissions happen at retrieval, not in the prompt.** Filter chunks by the user's access *before* anything is sent to the LLM. Telling the LLM "don't reveal salary data to non-managers" is not a security control. If a restricted chunk reaches the LLM, assume it can end up in the answer.
+
+**Do you need a special vector database?** Not always. 500 pages is only about 250,000 tokens, which is small. Postgres with the `pgvector` extension can store embeddings next to your other tables. A strong tradeoff answer: "I'd start with pgvector in our existing Postgres. I'd move to a dedicated vector database only if search got slow."
+
+**Estimating cost: a worked example.** LLM APIs charge per **token** (roughly ¾ of a word). Teach yourself the formula, not specific prices, because prices change often:
+
+> cost per question = (input tokens × input price) + (output tokens × output price)
+
+For "Ask the Handbook":
+
+| Number | Estimate |
+| --- | --- |
+| Questions per day | 300 employees × ~2 questions/day ≈ **600** |
+| Input tokens per question | instructions (~300) + 5 chunks × ~500 tokens + question (~50) ≈ **3,000** |
+| Output tokens per question | a short answer with sources ≈ **300** |
+| Tokens per day | 600 × 3,300 ≈ **2 million** |
+| One-time embedding cost | all 500 pages ≈ 250,000 tokens. Embedding is very cheap, so this is usually pennies |
+
+Plug in the current per-million-token prices from your provider's pricing page to get cost per question and per month. The takeaway for an interview: at this size, the cost is small. What drives it is **how many chunks you send** and **how long the answers are**, so those are what you'd tune first. Rate limits per user stop one person (or one bug) from running up the bill.
+
+**Estimating speed:** the embedding and search steps usually take well under a second. Most of the wait is the LLM generating the answer, often a few seconds. Streaming the answer word by word makes that wait feel much shorter.
 
 **Design questions every LLM feature raises:**
 
 | Concern | Questions to answer |
 | --- | --- |
 | Wrong answers ("hallucinations") | What happens when the answer isn't in the docs? How do you show sources so users can check? |
-| Testing ("evals") | What set of sample questions with known answers will you test against? How often? |
-| Cost | How much does each question cost in API fees? What stops abuse? |
+| Testing ("evals") | What sample questions with known answers will you test against? Do they include questions the docs *can't* answer, where the right answer is "I don't know"? When do you re-run them (for example, after changing the prompt, the model, or the chunk size)? |
+| Cost | How much does each question cost in API fees (use the formula above)? What stops abuse? |
 | Speed | How long will users wait? Can you stream the answer as it's generated? |
-| Privacy & permissions | Can every employee see every document? What data leaves your servers? |
+| Privacy & permissions | Can every employee see every document? Where do you filter by access (at retrieval, before the LLM)? What data leaves your servers? |
 | Fallback | What happens when the AI provider is down? |
 
 **Interview tip:** junior candidates who bring up testing, cost, and failure modes *without being asked* stand out, because many people treat the LLM as magic.
 
 ## We Do: Sketch "Ask the Handbook" (25 min)
 
-As a group, sketch Option C from the [System Design Exercise](../Assignments/System_Design.md#option-c-ai-powered-feature): requirements, the three RAG steps as boxes in a diagram, the data model for documents and chunks, one API endpoint, and three eval questions.
+As a group, sketch Option C from the [System Design Exercise](../Assignments/System_Design.md#option-c-ai-powered-feature):
+
+- Requirements
+- The three RAG steps as boxes in a diagram
+- The data model for documents and chunks. Include an embedding column and an access field (for example, `access_group`) on each chunk
+- One API endpoint
+- A rough cost per question, using the formula from the overview
+- Three eval questions with expected answers. **At least one must be a question the handbook can't answer**, so the expected answer is "I don't know." For extra credit, add one that a regular employee should *not* get an answer to because the information is restricted.
 
 ## Work Time + 1:1 Challenge 5 Debriefs (25 min)
 

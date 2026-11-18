@@ -37,9 +37,9 @@ This is a RAG design. RAG (retrieval-augmented generation) means: when a questio
 
 - How you'll split and store the documents so they can be searched
 - What happens when the answer isn't in the documents (it should say "I don't know," not invent an answer)
-- How you'd **test** whether answers are correct (a set of sample questions with known answers — often called "evals")
-- Cost and speed: roughly how much each question costs and how long users wait
-- Privacy: who's allowed to see which documents
+- How you'd **test** whether answers are correct (a set of sample questions with known answers — often called "evals"). Include at least one question the documents *can't* answer, where the expected answer is "I don't know"
+- Cost and speed: roughly how much each question costs and how long users wait. Show your math (tokens per question × price per token × questions per day)
+- Privacy: who's allowed to see which documents, and where in your design that's enforced (it should happen when chunks are retrieved, before anything is sent to the LLM)
 
 ## Using AI on this assignment
 
